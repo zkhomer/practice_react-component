@@ -22,13 +22,13 @@ class Quiz extends Component {
         ]
       },
       {
-        question: 'В каком году основали Харьков?',
+        question: 'В каком году основали Санкт-Петербург?',
         rightAnswerId: 3,
         id: 2,
         answers: [
           {text: '1700', id: 1},
           {text: '1702', id: 2},
-          {text: '1654', id: 3},
+          {text: '1703', id: 3},
           {text: '1803', id: 4}
         ]
       }
@@ -89,6 +89,10 @@ class Quiz extends Component {
       isFinished: false,
       results: {}
     })
+  }
+
+  componentDidMount() {
+    console.log('Quiz ID = ', this.props.match.params.id)
   }
 
   render() {

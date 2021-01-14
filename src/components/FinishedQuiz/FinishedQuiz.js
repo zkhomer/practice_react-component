@@ -16,7 +16,7 @@ const FinishedQuiz = props => {
   return (
     <div className={classes.FinishedQuiz}>
       <ul>
-        {props.quiz.map((quizItem, index) => {
+        { props.quiz.map((quizItem, index) => {
           const cls = [
             'fa',
             props.results[quizItem.id] === 'error' ? 'fa-times' : 'fa-check',
@@ -29,11 +29,11 @@ const FinishedQuiz = props => {
             >
               <strong>{index + 1}</strong>.&nbsp;
               {quizItem.question}
-              <i className={cls.join(' ')}/>
+              <i className={cls.join(' ')} />
             </li>
           )
 
-        })}
+        }) }
       </ul>
 
       <p>Правильно {successCount} из {props.quiz.length}</p>
